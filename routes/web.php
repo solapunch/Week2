@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-	$tanggal = date("d-m-y H:i:s", time());
-    return view('welcome') -> with('tanggal', $tanggal);
-});
+// Route::get('/', function () {
+// 	$tanggal = date("d-m-y H:i:s", time());
+//     return view('welcome') 
+//     -> with('tanggal', $tanggal);
+// });
 
 Route::get('halo', function () {
     return view('halo');
@@ -26,4 +27,16 @@ Route::get('halo/chick', function () {
 
 Route::get('chick', function () {
     return view('Rooster.chick');
+});
+
+Route::get('About', function () {
+    return view('Homepage.About');
+});
+
+Route::get('Gallery', function () {
+    return view('Homepage.Gallery');
+});
+
+Route::get('welcome', function () {
+    return view('welcome');
 });
